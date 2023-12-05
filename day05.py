@@ -59,6 +59,7 @@ def part1(seedlist):
 
 
 def part2OLD():
+    """Brute Force"""
     lowest = 1e12
     slists = list()
     for i in range(0,len(seedlist),2):
@@ -77,6 +78,9 @@ def part2OLD():
     return lowest
 
 def part2():
+    """Backmapping from 0 and checking if the seed at the end/
+    beginning is in the seedlist range
+    Took 43 minutes to run!"""
     slists = list()
     for i in range(0, len(seedlist), 2):
         #slists += [seedlist[i]+ n for n in range(seedlist[i+1]) ]
